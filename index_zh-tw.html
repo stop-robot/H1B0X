@@ -14,6 +14,7 @@
 <META name="keywords" content="email,HiNet Mail,Push Mail,hinet 郵件,hinet信箱,郵件委外,mail,spam,web mail,webmail,mail ASP,中華 電信 信箱,中華 電信 電子信箱,企業信箱,信箱委外,Mail Server,垃圾郵件,信箱,掃毒,郵件,郵件代管,郵件伺服器,資訊安全,電子信箱,電子郵件,網域名稱,傳真,簡訊,全能信箱,企業信箱,訊息服務,企業郵件">
 <META name="description" content="省去自行建置及維護電子郵件服務系統之成本及繁瑣，同時享受HiNet中華電信最穩固機房與充足頻寬提供企業電子郵件系統委外之專業化服務，輕鬆擁有安全無毒、不受垃圾郵件干擾的使用環境，讓企業重要商機(郵件)不漏失；多功能整合式郵件信箱服務，操作容易卻提昇企業競爭力">
 <title>hiBox全能信箱</title>
+<link rel="SHORTCUT ICON" href="webmail/favicon.ico">
 <style type="text/css">
 <!--
 body {
@@ -90,30 +91,6 @@ function callSubmit(eventTag) {
    var currentKey = event.charCode||event.keyCode;
    if (currentKey==13)
        handleSubmit();
-}
-
-
-
-function handleError() {
-	if (false || false ) {
-		/*modify start*/
-		document.write('<img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22"><font color="red">帳號或密碼認證失敗</font>');
-		//document.write('<tr><td width="244" align="center" class="bk12" height="9" colspan="2">\n'+'<img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22">&nbsp;&nbsp;<font color="red">' +'<span class=AlrtErrTxt> Authentication Failed<br> Reenter your username and password.</span><br></td></tr>');
-		/*
-		document.write('<DIV class=logErr>');
-		document.write('<table cellspacing=0 cellpadding=0 border=0>');
-		document.write('<tbody>');
-	        document.write('<tr>');
-		document.write('<td valign=top width="28"><img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22">&nbsp;&nbsp;</td>');
-		document.write("<td width='233'> <span class=AlrtErrTxt> Authentication Failed<br> Reenter your username and password.</span> </td>");
-
-		document.write('</tr>');
-		document.write('</tbody>');
-		document.write('</table>');
-		document.write('</DIV>');
-		modify end*/
-	}
-
 }
 
 function MM_swapImgRestore() { //v3.0
@@ -215,11 +192,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 	
 	<table width="252" height="135" border="0" cellpadding="0" cellspacing="1" class="loginTable">
       <tr>
-        <td height="40" colspan="2" align="right" valign="middle">
-		&nbsp; <script>
-				handleError();
-			   </script>
-	    </td>
+        <td height="40" colspan="2" align="right" valign="middle"><div id="error-block" class="hidden">
+		&nbsp; <img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22"><font color="red">帳號或密碼認證失敗</font>
+	    </div></td>
       </tr>
       <tr>
         <td height="30" colspan="2" align="center">帳號：
@@ -340,7 +315,6 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 
         if(pwdError) {
 			$('#error-block').removeClass('hidden');
-			$('#error-block1').addClass('hidden');
 			
         }
 
@@ -409,10 +383,3 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
  <!--footer end-->
 </body>
 </html>
-
- 
-
-<link rel="SHORTCUT ICON" href="webmail/favicon.ico">
-
-
-

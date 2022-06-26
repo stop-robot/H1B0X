@@ -7,6 +7,7 @@
 <META name="keywords" content="email,HiNet Mail,Push Mail,hinet 邮件,hinet信箱,邮件委外,mail,spam,web mail,webmail,mail ASP,中华 电信 信箱,中华 电信 电子信箱,企业信箱,信箱委外,Mail Server,垃圾邮件,信箱,扫毒,邮件,邮件代管,邮件服务器,信息安全,电子信箱,电子邮件,网域名称,传真,简讯,全能信箱,企业信箱,讯息服务,企业邮件">
 <META name="description" content="省去自行建置及维护电子邮件服务系统之成本及繁琐，同时享受HiNet中华电信最稳固机房与充足频宽提供企业电子邮件系统委外之专业化服务，轻松拥有安全无毒、不受垃圾邮件干扰的使用环境，让企业重要商机(邮件)不漏失；多功能整合式邮件信箱服务，操作容易却提升企业竞争力">
 <title>hiBox全能信箱</title>
+<link rel="SHORTCUT ICON" href="webmail/favicon.ico">
 <style type="text/css">
 <!--
 body {
@@ -95,30 +96,6 @@ function handleSubmit() {
   var targetAction =  "/uwc/auth";
   document.form1.action = targetAction;
   document.form1.submit();
-}
-
-
-
-function handleError() {
-	if (false || false ) {
-		/*modify start*/
-		document.write('<img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22"><font color="red">账号或密码认证失败</font>');
-		//document.write('<tr><td width="244" align="center" class="bk12" height="9" colspan="2">\n'+'<img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22">&nbsp;&nbsp;<font color="red">' +'<span class=AlrtErrTxt> Authentication Failed<br> Reenter your username and password.</span><br></td></tr>');
-		/*
-		document.write('<DIV class=logErr>');
-		document.write('<table cellspacing=0 cellpadding=0 border=0>');
-		document.write('<tbody>');
-	        document.write('<tr>');
-		document.write('<td valign=top width="28"><img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22">&nbsp;&nbsp;</td>');
-		document.write("<td width='233'> <span class=AlrtErrTxt> Authentication Failed<br> Reenter your username and password.</span> </td>");
-
-		document.write('</tr>');
-		document.write('</tbody>');
-		document.write('</table>');
-		document.write('</DIV>');
-		modify end*/
-	}
-
 }
 
 function MM_swapImgRestore() { //v3.0
@@ -214,11 +191,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
     
     <table width="252" height="135" border="0" cellpadding="0" cellspacing="1" class="loginTable">
       <tr>
-        <td height="40" colspan="2" align="right" valign="middle" class="loginTable">
-		&nbsp; <script>
-				handleError();
-			   </script>
-	    </td>
+        <td height="40" colspan="2" align="right" valign="middle"><div id="error-block" class="hidden">
+		&nbsp; <img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22"><font color="red">账号或密码认证失败</font>
+	    </div></td>
       </tr>
       <tr>
         <td height="30" colspan="2" align="center">账号： 
@@ -328,7 +303,6 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 
         if(pwdError) {
 			$('#error-block').removeClass('hidden');
-			$('#error-block1').addClass('hidden');
 			
         }
 
@@ -398,10 +372,3 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 </body>
 
 </html>
-
- 
-
-<link rel="SHORTCUT ICON" href="webmail/favicon.ico">
-
-
-

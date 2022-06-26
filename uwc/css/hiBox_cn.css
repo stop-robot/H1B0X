@@ -66,6 +66,8 @@ a.TDLink:hover,active {font-weight: normal; color: #002163; font-size: 12px; fon
 
 .front-WB { font-size: 12px; color: #ffffff;}
 
+.hidden { display: none;}
+
 .front-content { color: #333;}
 
 .org15 {
